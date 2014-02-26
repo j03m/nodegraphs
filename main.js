@@ -16,3 +16,4 @@ var config = {
 }
 
 var al = new AdjencyList(config);
+al.bfs(0);

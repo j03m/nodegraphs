@@ -104,16 +104,16 @@ AdjencyList.prototype.bfs = function(start){
     }
 }
 
-AdjencyList.prototype.processVertexEarly = function(){
-
+AdjencyList.prototype.processVertexEarly = function(v){
+    console.log("processed vertex:" +v );
 }
 
-AdjencyList.prototype.processVertexLate = function(){
-
+AdjencyList.prototype.processVertexLate = function(v){
+    //do nothing
 }
 
-AdjencyList.prototype.processEdge = function(){
-
+AdjencyList.prototype.processEdge = function(from, to){
+    console.log("processed edge:" +from + "->" + to );
 }
 
 
