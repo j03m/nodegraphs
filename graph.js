@@ -80,8 +80,8 @@ AdjencyList.prototype.bfs = function(start){
         while(list){
             //get the number of this child
             var childNode = list.number;
-            //if it wasn't processed or if this is a directed graph (I don't get this quite yet)
-            if (!this.processed[childNode] || this.directed){
+            //if it wasn't processed
+            if (!this.processed[childNode]){
                 this.processEdge(node, childNode);
             }
 
@@ -99,8 +99,6 @@ AdjencyList.prototype.bfs = function(start){
             list = list.next; //traverse the list
         }
 
-        this.processVertexLate(node);
-
     }
 }
 
@@ -108,9 +106,7 @@ AdjencyList.prototype.processVertexEarly = function(v){
     console.log("processed vertex:" +v );
 }
 
-AdjencyList.prototype.processVertexLate = function(v){
-    //do nothing
-}
+
 
 AdjencyList.prototype.processEdge = function(from, to){
     console.log("processed edge:" +from + "->" + to );
