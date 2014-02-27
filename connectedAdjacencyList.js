@@ -62,7 +62,17 @@ ConnectedAdjacencyList.prototype.processEdge = function(from, to){
         this.bipartite=false;
         console.log("From:" + from + " to:" + to + " are the same color");
     }
-    this.colors[to] = !this.colors[from];
+    this.colors[to] = this.complement(this.colors[from]);
+}
+
+ConnectedAdjacencyList.prototype.complement = function(value){
+    if (value == 0 || value == undefined){
+        return 1;
+    }else if (value == 1){
+        return 0;
+    }else{
+        throw "Unexpected value: " + value;
+    }
 }
 
 module.exports.ConnectedAdjacencyList = ConnectedAdjacencyList;

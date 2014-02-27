@@ -31,7 +31,20 @@ var configDisconnected = {
     ]
 }
 
-var al = new ConnectedAdjacencyList(configDisconnected);
+var configBipartite = {
+    "directed":true,
+    "edgeData":[ //nodes 0-5 are weapons, nodes 6-10 are ammo
+        {from:0, to:6},
+        {from:0, to:7},
+        {from:1, to:7},
+        {from:2, to:8},
+        {from:3, to:9},
+        {from:4, to:9},
+        {from:5, to:8}
+    ]
+}
+
+var al = new ConnectedAdjacencyList(configBipartite);
 al.bfs(0);
 al.findConnectedComponents();
 console.log ("Am I bipartite? Answer: " + al.isBipartite());
