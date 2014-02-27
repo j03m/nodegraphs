@@ -34,3 +34,4 @@ var configDisconnected = {
 var al = new ConnectedAdjacencyList(configDisconnected);
 al.bfs(0);
 al.findConnectedComponents();
+console.log ("Am I bipartite? Answer: " + al.isBipartite());
