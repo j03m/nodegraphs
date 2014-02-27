@@ -1,4 +1,4 @@
-var AdjencyList = require('./adjencylist.js').AdjencyList;
+var AdjacencyList = require('./adjacencyList.js').AdjacencyList;
 
 var config = {
     "directed":false,
@@ -47,7 +47,7 @@ var configComplex = {
 }
 
 
-var al = new AdjencyList(configComplex);
+var al = new AdjacencyList(configComplex);
 al.bfs(0);
 al.dumpParents();
 al.findPath(0,4);
