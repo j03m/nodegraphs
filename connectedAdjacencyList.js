@@ -58,6 +58,7 @@ ConnectedAdjacencyList.prototype.isBipartite = function(){
 
 //override of AdjacencyList processEdge method
 ConnectedAdjacencyList.prototype.processEdge = function(from, to){
+    ConnectedAdjacencyList.super_.prototype.processEdge.apply(this, arguments);
     if (this.colors[from] == this.colors[to]){
         this.bipartite=false;
         console.log("From:" + from + " to:" + to + " are the same color");

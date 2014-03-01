@@ -48,10 +48,10 @@ var configComplex = {
 
 
 var al = new AdjacencyList(configComplex);
-al.bfs(0);
+al.bfs(1);
 al.dumpParents();
-al.findPath(0,4);
-var stack = al.getPath(0,4);
+al.findPath(1,5);
+var stack = al.getPath(1,5);
 //pop the nodes off the stack
 while(stack.length>0){
     var node = stack.pop();

@@ -17,6 +17,7 @@ CycleFinder.prototype.hasCycle = function(){
 
 CycleFinder.prototype.processEdge = function(from, to){
     //detect a back edge
+    CycleFinder.super_.prototype.processEdge.apply(this, arguments);
     if (this.discovered[to] && this.processed[to]){
         console.log("Found a cycle from: " + from + " to: " + to);
         this.cycleDetected = true;
