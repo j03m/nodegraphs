@@ -11,6 +11,7 @@ util.inherits(CycleFinder, AdjacencyList);
 
 
 CycleFinder.prototype.hasCycle = function(){
+    this.initTraversal();
     this.dfs(0);
     return this.cycleDetected;
 }

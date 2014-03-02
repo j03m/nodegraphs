@@ -20,6 +20,7 @@ var config = {
 }
 
 var al = new ArticulationFinder(config);
+al.initTraversal();
 al.dfs(0);
 al.dumpEarliestChild();
 

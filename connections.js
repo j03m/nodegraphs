@@ -45,6 +45,6 @@ var configBipartite = {
 }
 
 var al = new ConnectedAdjacencyList(configBipartite);
-al.bfs(0);
+
 al.findConnectedComponents();
 console.log ("Am I bipartite? Answer: " + al.isBipartite());

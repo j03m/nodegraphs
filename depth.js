@@ -16,4 +16,5 @@ var config = {
 }
 
 var al = new AdjacencyList(config);
-al.bfs(0);
+al.initTraversal();
+al.dfs(0);

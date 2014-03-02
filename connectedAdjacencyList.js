@@ -14,7 +14,7 @@ util.inherits(ConnectedAdjacencyList, AdjacencyList);
 ConnectedAdjacencyList.prototype.findConnectedComponents = function(){
 
     //init the stuff we need for a b
-    this.initBfs();
+    this.initTraversal();
     var cohort = 0;
 
     //iterate through all of the vertices
@@ -33,8 +33,8 @@ ConnectedAdjacencyList.prototype.findConnectedComponents = function(){
 
 
 ConnectedAdjacencyList.prototype.isBipartite = function(){
-    this.initBfs();
     this.colors = [];
+    this.initTraversal();
     for(var i=0;i<this.numVertices;i++){
         this.colors.push(0);
     }

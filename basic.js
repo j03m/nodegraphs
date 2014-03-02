@@ -48,6 +48,7 @@ var configComplex = {
 
 
 var al = new AdjacencyList(configComplex);
+al.initTraversal();
 al.bfs(1);
 al.dumpParents();
 al.findPath(1,5);
