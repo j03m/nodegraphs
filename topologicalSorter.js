@@ -27,9 +27,7 @@ TopologicalSorter.prototype.topologicalSort = function(){
 }
 
 TopologicalSorter.prototype.processVertexLate = function(v){
-
         this.tsStack.push(v);
-
 }
 
 TopologicalSorter.prototype.processEdge = function(from, to){
