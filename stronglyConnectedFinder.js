@@ -29,11 +29,11 @@ StronglyConnectedFinder.prototype.findStronglyConnectedComponents = function(){
     this.noCapture = true;
 
     while(node!=undefined){
-        node = this.tsStack.pop();
         if (!this.discovered[node]){
             this.dfs(node);
             process.stdout.write("\n");
         }
+        node = this.tsStack.pop();
     }
 }
 
